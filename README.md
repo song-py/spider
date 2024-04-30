@@ -2,6 +2,6 @@
 
 spider job webs
 
-now support 51job
+支持 51job、智联招聘
 
 no main, add yourself

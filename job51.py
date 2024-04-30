@@ -1,6 +1,4 @@
-from selenium import webdriver
 from time import sleep
-from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import pandas
@@ -11,7 +9,7 @@ from driver import Driver
 class Job51(Driver):
     
     def __init__(self, date: str):
-        super(Job51, self).__init__()
+        super(Job51, self).__init__(True)
         self.url = 'http://search.51job.com'
         self.date = date
     
@@ -39,7 +37,7 @@ class Job51(Driver):
             job_detail = json.loads(job.get_attribute('sensorsdata'))
 
             try:
-                 company = job.find_element(By.XPATH, './div[3]/div[1]/a').text
+                company = job.find_element(By.XPATH, './div[3]/div[1]/a').text
             except:
                 company = ''
             res = {
