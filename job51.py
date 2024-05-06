@@ -9,7 +9,7 @@ from driver import Driver
 class Job51(Driver):
     
     def __init__(self, date: str):
-        super(Job51, self).__init__(True)
+        super(Job51, self).__init__()
         self.url = 'http://search.51job.com'
         self.date = date
     
